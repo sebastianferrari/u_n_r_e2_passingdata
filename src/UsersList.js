@@ -8,18 +8,18 @@ class UsersList extends Component {
       return this.props.users[item.userID];
     })
 
-    console.log("Profiles of this movie", profilesOfMovie);
-    console.log("Users of this movie", usersToReturn);
-
     if (usersToReturn.length > 0) {
       return (
-        <ul>
-          {usersToReturn.map(user => (
-            <li key={this.props.movieID + '_' + user.id}>
-              {user.name}
-            </li>
-          ))}
-        </ul>
+        <div>
+          <p>Liked by:</p>
+          <ul>
+            {usersToReturn.map(user => (
+              <li key={this.props.movieID + '_' + user.id}>
+                {user.name}
+              </li>
+            ))}
+          </ul>
+    	</div>
       )
     }
 

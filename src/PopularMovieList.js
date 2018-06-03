@@ -7,11 +7,9 @@ class PopularMovieList extends Component {
       <div>
         {Object.keys(this.props.movies).map(key => {
           const movie = this.props.movies[key];
-          console.log(movie.name);
           return (
             <div key={key}>
-              <h2>{movie.name}</h2>
-              <p>Liked by:</p>
+              <h2>{movie.name}</h2>              
               <UsersList 
                 movieID={movie.id} 
                 users={this.props.users}
